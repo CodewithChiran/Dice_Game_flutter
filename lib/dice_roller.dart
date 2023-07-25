@@ -1,7 +1,9 @@
-import 'package:flutter/material.dart';
 import 'dart:math';
 
-class  DiceRoller extends StatefulBuilder{ 
+import 'package:flutter/material.dart';
+
+
+class  DiceRoller extends StatefulWidget{ 
   const DiceRoller({super.key});
 
   @override
@@ -15,9 +17,9 @@ class _DiceRollerState extends State<DiceRoller>{
   var currentDiceRoll =2;
   void rollDice() {
     setState( (){
-      currentDiceRoll  = Random.nextInt(6) + 1;
-  });
+      currentDiceRoll  = Random().nextInt(6) + 1;});
   }
+
   @override
   Widget build(context){
     return Column(
